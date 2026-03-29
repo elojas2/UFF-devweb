@@ -1,9 +1,15 @@
-const form = document.getElementById('product-form');
-const inputName = document.getElementById('product-name');
-const inputCategory = document.getElementById('product-category');
-const inputPrice = document.getElementById('product-price');
+const form              = document.getElementById('product-form');
+const inputName         = document.getElementById('product-name');
+const inputCategory     = document.getElementById('product-category');
+const inputPrice        = document.getElementById('product-price');
 
-const productList = document.getElementById('list-product');
+const productList       = document.getElementById('list-product');
+
+const message           = document.getElementById("message");
+const metricsContainer  = document.getElementById("metrics");
+const totalEl           = document.getElementById("total");
+const mediaEl           = document.getElementById("media");
+
 
 let products = [];
 
@@ -43,6 +49,8 @@ function renderProducts() {
         `;
         productList.appendChild(productItem);
     });
+
+    updateMetrics();
 }
 
 function removeProduct(index) {
@@ -69,4 +77,28 @@ function validateInput(name, category, price) {
     }
 
     return true;
+}
+
+function updateMetrics() {
+    let total = 0;
+    let media = 0;
+    
+    products.forEach(function(product) {
+        total += product.price;
+    });
+
+    if (products.length > 0) {
+        media = total / products.length;
+    }
+
+    totalEl.textContent = total.toFixed(2);
+    mediaEl.textContent = media.toFixed(2);
+
+    if (products.length === 0) {
+        message.style.display = "block";
+        metricsContainer.style.display = "none";
+    } else {
+        message.style.display = "none";
+        metricsContainer.style.display = "block";
+    }  
 }

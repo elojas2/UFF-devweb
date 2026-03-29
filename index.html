@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho 1 de Dev Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -21,9 +22,11 @@
 
         <div class="data-product">
             <h2>Dados do produto:</h2>
-            <p class="message"> </p>
-            <div id="product-data"></div>
-
+            <p class="message" id="message"> Está vazio por enquanto </p>
+            <div id="metrics" style="display: none">
+                <p>Total: R$ <span id="total">0.00</span></p>
+                <p>Média: R$ <span id="media">0.00</span></p>
+            </div>
         </div>
         <!-- Lista (Área de injeção) -->
         <div class="list-product" id="list-product"></div>
