@@ -1,6 +1,22 @@
 # Devweb
 
-Desenvolvam uma aplicação de catálogo de produtos em uma estrutura de arquivos tripartida (HTML, CSS e JS) que permita ao usuário gerenciar uma lista de itens em tempo real; a interface deve conter um formulário para entrada de novos dados (nome, categoria e preço), uma área de exibição que gere automaticamente 'cards' ou linhas de tabela para cada item cadastrado, e uma seção de inteligência de dados que apresente métricas calculadas automaticamente — como o valor total do inventário ou o preço médio dos produtos — atualizando-se instantaneamente a cada nova inserção ou remoção de item .
+Desenvolvam uma aplicação de catálogo de produtos em uma estrutura de arquivos tripartida (HTML, CSS e JS) que permita ao usuário gerenciar uma lista de itens em tempo real; a interface deve conter um formulário para entrada de novos dados (nome, categoria e preço), uma área de exibição que gere automaticamente 'cards' ou linhas de tabela para cada item cadastrado, e uma seção de inteligência de dados que apresente métricas calculadas automaticamente — como o valor total do inventário ou o preço médio dos produtos — atualizando-se instantaneamente a cada nova inserção ou remoção de item.
+
+## Todo list
+
+- [x] Formulario
+  - [x] Nome produto
+  - [x] Categoria produto
+  - [x] Valor produto
+
+- [x] Card
+  - [x] Exibir nome produto
+  - [x] Exibir categoria produto
+  - [x] Exibir valor produto
+
+- [] Inteligencia de dados (métricas)
+  - [] Valor total dos produtos
+  - [] Preço médio
 
 Checklist para auxiliar o desenvolvimento do exercício:
 
@@ -8,11 +24,11 @@ Checklist para auxiliar o desenvolvimento do exercício:
 
 [ x ] Modularidade: O projeto deve ser segmentado em arquivos distintos de acordo com sua responsabilidade (conteúdo, apresentação e comportamento).
 
-[ ] Semântica: O documento base deve utilizar elementos que descrevam o significado do conteúdo, facilitando a acessibilidade e a leitura por máquinas.
+[ x ] Semântica: O documento base deve utilizar elementos que descrevam o significado do conteúdo, facilitando a acessibilidade e a leitura por máquinas.
 
-[ ] Vinculação: Os recursos externos devem ser referenciados de forma que o carregamento da página seja otimizado e funcional.
+[ x ] Vinculação: Os recursos externos devem ser referenciados de forma que o carregamento da página seja otimizado e funcional.
 
-[ ] Área de Injeção: Deve existir um local identificado no código para que novos conteúdos sejam inseridos via programação, sem estarem fixos no código-fonte original.
+[ x ] Área de Injeção: Deve existir um local identificado no código para que novos conteúdos sejam inseridos via programação, sem estarem fixos no código-fonte original.
 
 ## 🎨 Interface e Experiência (UI/UX)
 
