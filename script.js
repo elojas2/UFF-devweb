@@ -13,6 +13,7 @@ const mediaEl           = document.getElementById("media");
 
 let products = [];
 
+// funcao do evento do botao
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -35,6 +36,7 @@ form.addEventListener('submit', function(event) {
     form.reset();
 });
 
+// funcao para mostrar na tela os produtos
 function renderProducts() {
     productList.innerHTML = '';
 
@@ -53,11 +55,13 @@ function renderProducts() {
     updateMetrics();
 }
 
+// funcao de remover item
 function removeProduct(index) {
     products.splice(index, 1);
     renderProducts();
 }
 
+// funcao de validar se os campos estao preenchidos
 function validateInput(name, category, price) {
 
     if (name == ''){
@@ -79,10 +83,11 @@ function validateInput(name, category, price) {
     return true;
 }
 
+// funcao para atualizar os cards e fazer contas
 function updateMetrics() {
     let total = 0;
     let media = 0;
-    
+
     products.forEach(function(product) {
         total += product.price;
     });
@@ -100,5 +105,5 @@ function updateMetrics() {
     } else {
         message.style.display = "none";
         metricsContainer.style.display = "block";
-    }  
+    }
 }
